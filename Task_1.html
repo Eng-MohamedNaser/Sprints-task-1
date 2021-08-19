@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .e{
+        color: blue;
+    }
+    .cont{
+        text-align: center;
+        background-color: blue;
+        height: 400px;
+        width: 450px ;
+        margin: auto;
+        padding: 50px;
+        border: black 5px solid ;
+        border-radius: 5%;
+    }
+    h1{
+        color:white;
+        font-size: 80px;
+    }
+    body{
+        padding: 50px;
+        background-color: rgb(204, 204, 255);
+    }
+    p{
+        color: white;
+        display: inline;
+    }
+    input{
+        display: inline;
+        margin: 5px;
+    }
+    
+</style>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Task 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function calculate(){
+            //getting two numbers
+            num1 = Number(document.getElementById("num1").value)
+            num2 = Number(document.getElementById("num2").value)
+
+            //checking for validation 
+            if(num1 != 0 && num2 != 0) {
+                result = num1 + num2
+                document.getElementById("result").value = result
+            }
+            //if numbers not defined
+            else{
+                alert("plese enter tow numbers")
+                document.getElementById("result").value = 0
+            }
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <div class="cont">
+        <h1>Sprints</h1>
+        <br>
+        <p>Number 1 :</p></label><input type="number" id="num1" value="5">
+        <br>
+        <p>Number 2 :</p><input type="number" id="num2" value="10">
+        <br><br>
+        <p>Your Resutlt</p>
+        <br>
+        <input type="number" id="result">
+        <br><br>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+</body>
+</html>
